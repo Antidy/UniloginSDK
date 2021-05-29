@@ -31,7 +31,7 @@
 -keep class cn.com.chinatelecom.account.**{*;}
 #emay
 -keep class cn.emay.ql.UniSDK{*;}
--keep class cn.emay.ql.net.**{*;}
+#-keep class cn.emay.ql.net.**{*;}
 -keep class cn.emay.ql.utils.**{*;}
 #V6新增
 -keep class cn.emay.ql.listeners.**{*;}
