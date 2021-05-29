@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ct_account_dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/ct_account_dialog_conner_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="33dp">
+        <!-- 对话框隐私协议文本配置说明：
+           1. 文案的前面部分"登录即同意《天翼账号服务与隐私协议》"不可修改
+           2. 文案中《天翼账号服务与隐私协议》的色值通过android:tag属性设置，点击事件由SDK处理。
+           3. 文案内容必须按接入规范设置
+         -->
+        <TextView
+            android:id="@+id/ct_account_dialog_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="登录即同意《天翼账号服务与隐私协议》"
+            android:textColor="#D9000000"
+            android:tag="#FF0090FF"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#33000000"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <Button
+            android:id="@+id/ct_account_dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="返回"
+            android:textSize="16sp"
+            android:textColor="#FF0090FF"
+            android:background="@drawable/ct_account_dialog_cancel_selector"
+            />
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#33000000"/>
+        <Button
+            android:id="@+id/ct_account_dialog_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确认登录"
+            android:textSize="16sp"
+            android:textColor="#FF0090FF"
+            android:textStyle="bold"
+            android:background="@drawable/ct_account_dialog_confirm_selector"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_arrow_back" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="免密登录"
+            android:textColor="#000000"
+            android:textSize="15sp"></TextView>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#333333"
+        android:layout_height="1px"></View>
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/liantong_logo"
+        android:layout_marginTop="50dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tv_tianyi_renzheng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"></TextView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#999999"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="1px"></View>
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@drawable/login_bg"
+        android:text="本机号码一键登录"></TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_yinsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="#999999"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="登录即同意服务与隐私协议，并授权应用获取本机号码"></TextView>
+</RelativeLayout>

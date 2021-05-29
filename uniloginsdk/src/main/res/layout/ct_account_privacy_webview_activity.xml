@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 头部导航栏布局 -->
+    <RelativeLayout
+        android:id="@+id/ct_account_webview_nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <ImageView
+            android:id="@+id/ct_account_webview_goback"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:visibility="visible"
+            android:scaleType="center"
+            android:src="@drawable/ct_account_auth_goback_selector"/>
+        <TextView
+            android:id="@+id/ct_account_webview_nav_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:textSize="20sp"
+            android:textColor="#FF000000"
+            android:text="服务与隐私协议"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#33000000"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/ct_account_progressbar_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:max="100"
+        android:progress="10"
+        android:progressDrawable="@drawable/ct_account_progressbar_gradient"
+        />
+
+    <!-- WebView 用于展示《服务与隐私协议》的内容-->
+    <WebView
+        android:id="@+id/ct_account_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.kezong.fat-aar'
+apply plugin: 'com.github.dcendents.android-maven'
+group ='com.github.Antidy'
+android {
+    compileSdkVersion 28
+    buildToolsVersion = '28.0.3'
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 4
+        versionName '1.3.1'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+fataar {
+    /**
+     * If transitive is true, local jar module and remote library's dependencies will be embed.
+     * If transitive is false, just embed first level dependency
+     * Local aar project does not support transitive, always embed first level
+     * Default value is false
+     * @since 1.3.0
+     */
+    transitive = true
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    api  fileTree(dir: 'libs', include: ['*.jar'])
+    api  'com.android.support.constraint:constraint-layout:1.0.2'
+    api  'com.android.support:appcompat-v7:28.0.0'
+    embed (name:'quick_login_android_5.8.1', ext: 'aar')
+    embed (name:'CTAccountSdk_HY_v3.8.5_all', ext: 'aar')
+    embed (name:'Ui-factory_oauth_mobile_4.0.3', ext: 'aar')
+    api  'com.alibaba:fastjson:1.2.58'
+    api  'com.squareup.okhttp3:okhttp:3.14.1'
+    api  'com.android.support.constraint:constraint-layout:1.1.3'
+    //embed
+}
+
