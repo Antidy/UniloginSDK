@@ -194,7 +194,9 @@ public class UniSDK {
                         .setCheckedImgPath(yiDongLoginConfig.getCheckedImgPath())//chebox被勾选图片
                         .setCheckBoxImgPath(yiDongLoginConfig.getCheckedImgPath(), yiDongLoginConfig.getUncheckedImgPath(), yiDongLoginConfig.getCheckBoxImgPathSize(), yiDongLoginConfig.getCheckBoxImgPathSize())
                         .setPrivacyState(yiDongLoginConfig.isPrivacyState());//授权页check
-                config.setPrivacyAlignment("登录即同意" + AuthThemeConfig.PLACEHOLDER + mLoginUiConfig.getProtocolName1().replaceAll("《","").replaceAll("》","") + mLoginUiConfig.getProtocolName2().replaceAll("《","").replaceAll("》","") + "并使用本机号码登录", mLoginUiConfig.getProtocolName1(), mLoginUiConfig.getProtocolUrl1(), mLoginUiConfig.getProtocolName2(), mLoginUiConfig.getProtocolUrl2(),"","","","");
+                String protocolName1 =  mLoginUiConfig.getProtocolName1().replaceAll("《","").replaceAll("》","");
+                String protocolName2 =  mLoginUiConfig.getProtocolName2().replaceAll("《","").replaceAll("》","");
+                config.setPrivacyAlignment("登录即同意" + AuthThemeConfig.PLACEHOLDER +  mLoginUiConfig.getProtocolName1() +  mLoginUiConfig.getProtocolName2()+ "并使用本机号码登录", protocolName1, mLoginUiConfig.getProtocolUrl1(), protocolName2, mLoginUiConfig.getProtocolUrl2(),"","","","");
                 config.setPrivacyText(yiDongLoginConfig.getPrivacyTextSize(), yiDongLoginConfig.getPrivacyTextColor1(), yiDongLoginConfig.getPrivacyTextColor2(), true,false)
                         .setPrivacyOffsetY_B(yiDongLoginConfig.getPrivacyOffsetY_B())//隐私条款Y偏移量
                         .setPrivacyMargin(yiDongLoginConfig.getPrivacyMargin(), yiDongLoginConfig.getPrivacyMargin());
