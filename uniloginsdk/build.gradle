@@ -20,7 +20,7 @@ android {
         }
     }
 }
-fataar {
+//fataar {
     /**
      * If transitive is true, local jar module and remote library's dependencies will be embed.
      * If transitive is false, just embed first level dependency
@@ -28,8 +28,8 @@ fataar {
      * Default value is false
      * @since 1.3.0
      */
-    transitive = true
-}
+//    transitive = true
+//}
 repositories {
     flatDir {
         dirs 'libs'
