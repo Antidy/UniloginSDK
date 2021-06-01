@@ -126,11 +126,11 @@ public class UniSDK {
                     mSdkId = jsonObject.getString("appId");
                     mSdkSecretKey = jsonObject.getString("secretKey");
                     mBusinessId = jsonObject.getString("businessId");
+                    initSDKLogin();
                     if (mInitCallBack != null) {
                         mInitCallBack.onSuccess("初始化成功");
                     }
                     initSucc = true;
-                    initSDKLogin();
                 } catch (Exception e) {
                     initSucc = false;
                     e.printStackTrace();
